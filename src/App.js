@@ -4,12 +4,12 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { LandingPage } from "./Components/LandingPage/LandingPage";
+import { SinglePlayerHomepage } from "./Components/SinglePlayerHomepage/SinglePlayerHomepage";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage />
+      <SinglePlayerHomepage />
     </div>
   );
 }
