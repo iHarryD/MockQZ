@@ -1,6 +1,14 @@
 import "./CSS/style.css";
 
+import { useState } from "react";
+
 export function SinglePlayerHomepage() {
+  const [userSelection, setUserSelection] = useState(null);
+
+  const quizClickHandler = (e) => {
+    setUserSelection(e.target.value);
+  };
+
   return (
     <main className="single-player-homepage">
       <h3 className="sub-heading --h2">Select the quiz</h3>
@@ -23,7 +31,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="mcu"
+              onClick={(e) => quizClickHandler(e)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
         <div className="quiz-card --homepage --verticle-flex">
@@ -42,7 +56,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="hp"
+              onClick={(e) => quizClickHandler(e)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
         <div className="quiz-card --homepage --verticle-flex">
@@ -61,7 +81,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="dceu"
+              onClick={(e) => quizClickHandler(e.target.value)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
         <div className="quiz-card --homepage --verticle-flex">
@@ -80,7 +106,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="mc"
+              onClick={(e) => quizClickHandler(e)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
         <div className="quiz-card --homepage --verticle-flex">
@@ -99,7 +131,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="aot"
+              onClick={(e) => quizClickHandler(e)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
         <div className="quiz-card --homepage --verticle-flex">
@@ -117,7 +155,13 @@ export function SinglePlayerHomepage() {
             </p>
           </div>
           <div className="quiz-card-overlay --verticle-flex --centered-flex">
-            <button className="btn --secondary-btn">Take Quiz</button>
+            <button
+              className="btn --secondary-btn"
+              value="roll"
+              onClick={(e) => quizClickHandler(e)}
+            >
+              Take Quiz
+            </button>
           </div>
         </div>
       </section>
