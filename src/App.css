@@ -29,3 +29,7 @@
 .btn.btn.--secondary-btn:hover {
   background: var(--SECONDARY-BTN-HOVER-BACKGROUND-CLR);
 }
+
+.--icon-only-btn {
+  padding: 0;
+}

@@ -1,0 +1,18 @@
+.navbar {
+  align-items: center;
+  box-shadow: 0px -18px 57px var(--ACCENT-CLR);
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+}
+
+.navlinks-container {
+  --HAS-GAP-VALUE: 3rem;
+}
+
+.navbar svg {
+  transition: all var(--TRANSITION-DURATION);
+}
+
+.navlink svg:hover {
+  fill: var(--ACCENT-CLR);
+}

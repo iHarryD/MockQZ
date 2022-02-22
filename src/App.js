@@ -4,12 +4,12 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { SinglePlayerHomepage } from "./Components/SinglePlayerHomepage/SinglePlayerHomepage";
+import { Header } from "./Components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <SinglePlayerHomepage />
+      <Header />
     </div>
   );
 }
