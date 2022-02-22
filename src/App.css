@@ -12,8 +12,20 @@
   padding: var(--BTN-PADDING-Y) var(--BTN-PADDING-X);
 }
 
-.--primary-btn {
+.btn.--primary-btn {
   background: var(--ACCENT-CLR);
   color: var(--SECONDARY-FONT-CLR);
   border-radius: var(--BORDER-RADIUS);
+}
+
+.btn.--secondary-btn {
+  padding: calc(var(--BTN-PADDING-Y) - var(--BTN-INPUT-BORDER-WIDTH))
+    calc(var(--BTN-PADDING-X) - var(--BTN-INPUT-BORDER-WIDTH));
+  background: #0000;
+  border: var(--BTN-INPUT-BORDER-WIDTH) solid var(--ACCENT-CLR);
+  transition: background var(--TRANSITION-DURATION);
+}
+
+.btn.btn.--secondary-btn:hover {
+  background: var(--SECONDARY-BTN-HOVER-BACKGROUND-CLR);
 }
