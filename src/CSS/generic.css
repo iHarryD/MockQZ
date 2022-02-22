@@ -22,3 +22,19 @@ main {
 img {
   max-width: 100%;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(129, 129, 129, 0.39);
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #616161bb;
+}
