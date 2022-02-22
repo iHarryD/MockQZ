@@ -24,6 +24,7 @@
   background: #0000;
   border: var(--BTN-INPUT-BORDER-WIDTH) solid var(--ACCENT-CLR);
   transition: background var(--TRANSITION-DURATION);
+  border-radius: var(--BORDER-RADIUS);
 }
 
 .btn.btn.--secondary-btn:hover {
