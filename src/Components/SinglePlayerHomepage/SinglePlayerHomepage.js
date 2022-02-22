@@ -84,7 +84,7 @@ export function SinglePlayerHomepage() {
             <button
               className="btn --secondary-btn"
               value="dceu"
-              onClick={(e) => quizClickHandler(e.target.value)}
+              onClick={(e) => quizClickHandler(e)}
             >
               Take Quiz
             </button>
