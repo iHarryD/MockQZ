@@ -4,14 +4,8 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { SinglePlayerHomepage } from "./Components/SinglePlayerHomepage/SinglePlayerHomepage";
-
 function App() {
-  return (
-    <div className="App">
-      <SinglePlayerHomepage />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
