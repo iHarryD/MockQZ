@@ -1,7 +1,12 @@
 :root {
   --ACCENT-CLR: #49a0eb;
+  --HOVER-OVERLAY-CLR: #3a3a3a17;
   --PRIMARY-BACKGROUND-CLR: #eef8ffee;
   --PRIMARY-FONT-CLR: rgb(20, 20, 20);
   --SECONDARY-BACKGROUND-CLR: #3f474c;
   --SECONDARY-FONT-CLR: #fff;
+
+  --BORDER-RADIUS: 5px;
+  --BTN-PADDING-Y: 10px;
+  --BTN-PADDING-X: 18px;
 }

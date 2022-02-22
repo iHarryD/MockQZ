@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: 600;
+  padding: var(--BTN-PADDING-Y) var(--BTN-PADDING-X);
+}
+
+.--primary-btn {
+  background: var(--ACCENT-CLR);
+  color: var(--SECONDARY-FONT-CLR);
+  border-radius: var(--BORDER-RADIUS);
+}
