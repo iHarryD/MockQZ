@@ -1,0 +1,35 @@
+.--verticle-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.--horizontal-flex {
+  display: flex;
+}
+
+.--centered-flex {
+  align-items: center;
+  justify-content: center;
+}
+
+.--has-gap {
+  gap: 1rem;
+}
+
+.--has-hover-overlay {
+  position: relative;
+}
+
+.--has-hover-overlay::after {
+  background: var(--HOVER-OVERLAY-CLR);
+  border-radius: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.--has-hover-overlay:hover::after {
+  position: absolute;
+}
