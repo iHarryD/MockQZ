@@ -1,0 +1,16 @@
+body {
+  background: var(--PRIMARY-BACKGROUND-CLR);
+}
+
+button,
+input,
+a,
+ul {
+  background: inherit;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
