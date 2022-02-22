@@ -1,0 +1,73 @@
+.quiz-card {
+  position: relative;
+  min-width: var(--QUIZ-CARD-MIN-WIDTH, 13rem);
+  max-width: var(--QUIZ-CARD-MAX-WIDTH, 17rem);
+  background: var(--QUIZ-CARD-BACKGROUND-CLR, #26435b);
+  color: var(--QUIZ-CARD-FONT-CLR, #fff);
+  height: var(--QUIZ-CARD-HEIGHT, 19.65rem);
+}
+
+.quiz-card-text-container {
+  --HAS-GAP-VALUE: 0.5rem;
+}
+
+.quiz-card-heading {
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.quiz-card-thumbnail-container {
+  height: 40%;
+}
+
+.quiz-card-thumbnail-img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.quiz-card-description {
+  text-align: justify;
+}
+
+.quiz-card-overlay {
+  display: none;
+  position: absolute;
+  background: transparent;
+  border-radius: inherit;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity var(--TRANSITION-DURATION); /* Why does this not work? */
+}
+
+.quiz-card:hover > .quiz-card-overlay {
+  background: var(--QUIZ-CARD-OVERLAY-CLR, #000000b8);
+  display: flex;
+}
+
+.quiz-card-overlay:hover {
+  opacity: 1;
+}
+
+.quiz-selection-section {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--QUIZ-CARD-MIN-WIDTH, 12rem), 1fr)
+  );
+}
+
+.single-player-homepage .sub-heading {
+  border-bottom: 2px solid;
+  margin: 0 1rem;
+  padding: 1rem 0;
+}
+
+.text-at-bottom {
+  margin-top: 1rem;
+  text-align: center;
+}
