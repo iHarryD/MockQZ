@@ -4,12 +4,12 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { SinglePlayerHomepage } from "./Components/SinglePlayerHomepage/SinglePlayerHomepage";
+import { RulesModal } from "./Components/RulesModal/RulesModal";
 
 function App() {
   return (
     <div className="App">
-      <SinglePlayerHomepage />
+      <RulesModal />
     </div>
   );
 }
