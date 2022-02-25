@@ -4,13 +4,17 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { RulesModal } from "./Components/RulesModal/RulesModal";
+import { QuestionsState } from "./QuestionsContext";
+
+import { Quiz } from "./Components/Quiz/Quiz";
 
 function App() {
   return (
-    <div className="App">
-      <RulesModal />
-    </div>
+    <QuestionsState>
+      <div className="App">
+        <Quiz />
+      </div>
+    </QuestionsState>
   );
 }
 
