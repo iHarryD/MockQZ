@@ -19,6 +19,12 @@
   border-radius: 15px;
 }
 
+.username-input {
+  border-bottom: 1px solid var(--ACCENT-CLR);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+
 .modal__container ul {
   list-style: disc;
   padding: 0.5rem 1rem;

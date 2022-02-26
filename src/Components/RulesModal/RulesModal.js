@@ -1,9 +1,10 @@
 import "./CSS/style.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function RulesModal() {
   const [userResponse, setUserResponse] = useState(null);
+  const [userName, setUserName] = useState("Guest");
 
   const modalButtonsHandler = (e) => {
     let clickOrigin = e.target.value === "start" ? "start" : "back";
@@ -68,21 +69,30 @@ export function RulesModal() {
             </ul>
           </div>
         </div>
-        <div className="--horizontal-flex --centered-flex --has-gap">
-          <button
-            className="btn --primary-btn --has-hover-overlay"
-            value="start"
-            onClick={(e) => modalButtonsHandler(e)}
-          >
-            Start Quiz
-          </button>
-          <button
-            className="btn modal-close-btn --secondary-btn"
-            value="back"
-            onClick={(e) => modalButtonsHandler(e)}
-          >
-            Go Back
-          </button>
+        <div className="--verticle-flex --centered-flex --has-gap">
+          <input
+            className="username-input"
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            defaultValue={userName}
+          />
+          <div className="--horizontal-flex --centered-flex --has-gap">
+            <button
+              className="btn --primary-btn --has-hover-overlay"
+              value="start"
+              onClick={(e) => modalButtonsHandler(e)}
+            >
+              Start Quiz
+            </button>
+            <button
+              className="btn modal-close-btn --secondary-btn"
+              value="back"
+              onClick={(e) => modalButtonsHandler(e)}
+            >
+              Go Back
+            </button>
+          </div>
         </div>
       </div>
       <div className="body-overlay-for-modal"></div>
