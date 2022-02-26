@@ -1,0 +1,50 @@
+.modal {
+  background: var(--SECONDARY-BACKGROUND-CLR);
+  border-radius: 30px;
+  color: var(--SECONDARY-FONT-CLR);
+  height: 90vh;
+  margin: 5vh 5vw;
+  overflow: auto;
+  width: 90vw;
+  z-index: 1;
+}
+
+.quiz-selected-name {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.modal__container {
+  background: #4b545b;
+  border-radius: 15px;
+}
+
+.username-input {
+  border-bottom: 1px solid var(--ACCENT-CLR);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+
+.modal__container ul {
+  list-style: disc;
+  padding: 0.5rem 1rem;
+}
+
+.modal__container ul li {
+  margin-bottom: 5px;
+}
+
+.modal__container-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+body.modal-active {
+  background: #00000080;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
