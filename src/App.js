@@ -4,12 +4,12 @@ import "./CSS/typography.css";
 import "./CSS/utilities.css";
 import "./CSS/generic.css";
 
-import { RulesModal } from "./Components/RulesModal/RulesModal";
+import ResultPage from "./Components/ResultPage/ResultPage";
 
 function App() {
   return (
     <div className="App">
-      <RulesModal />
+      <ResultPage />
     </div>
   );
 }
