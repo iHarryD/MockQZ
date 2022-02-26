@@ -1,0 +1,31 @@
+.main.--result-page {
+  border: 2px solid var(--ACCENT-CLR);
+  border-radius: var(--BORDER-RADIUS);
+  margin: 2rem;
+}
+
+.result-page-header,
+.result-section {
+  border-bottom: 2px solid var(--ACCENT-CLR);
+  text-align: center;
+}
+
+.result-section {
+  flex-grow: 1;
+}
+
+.result-page-footer {
+  text-align: center;
+}
+
+.footer-message {
+  margin-bottom: 1rem;
+}
+
+.to-user-message {
+  font-size: 2rem;
+}
+
+.score-message {
+  font-size: 3rem;
+}
