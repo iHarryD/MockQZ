@@ -1,0 +1,61 @@
+.landing-page-heading,
+.landing-page-text {
+  text-transform: uppercase;
+}
+
+.landing-page-sub-heading {
+  margin-bottom: 2rem;
+}
+
+.landing-page-btn-container {
+  margin: 1rem 0;
+}
+
+/*
+
+.landing-page-logo {
+  background: linear-gradient(45deg, var(--ACCENT-CLR), #009688);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+*/
+
+.landing-page-animated-letters {
+  color: var(--ACCENT-CLR);
+  cursor: default;
+  display: inline-block;
+  font-size: 1.1em;
+  margin-right: -8px;
+  text-shadow: -3px 2px 5px #767676;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.landing-page-animated-letters:nth-child(1) {
+  transform: rotate(5deg);
+}
+
+.landing-page-animated-letters:nth-child(2) {
+  transform: rotate(-10deg);
+}
+
+.landing-page-animated-letters:nth-child(3) {
+  transform: rotate(10deg);
+}
+
+.landing-page-animated-letters:nth-child(4) {
+  transform: rotate(8deg);
+}
+
+.landing-page-animated-letters:nth-child(5) {
+  transform: rotate(-5deg);
+}
+
+.landing-page-animated-letters:nth-child(6) {
+  transform: rotate(-17deg);
+}
+
+.landing-page-animated-letters:hover {
+  margin-top: -20px;
+  transform: scale(1.2);
+}
