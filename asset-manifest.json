@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MockQZ/static/css/main.df170737.css",
-    "main.js": "/MockQZ/static/js/main.06540b7d.js",
+    "main.js": "/MockQZ/static/js/main.99f1a4f0.js",
     "static/js/787.bfc99d0a.chunk.js": "/MockQZ/static/js/787.bfc99d0a.chunk.js",
     "static/media/card-thumbnail-mu.jpg": "/MockQZ/static/media/card-thumbnail-mu.54f97db39bc402724810.jpg",
     "static/media/card-thumbnail-aot.jpeg": "/MockQZ/static/media/card-thumbnail-aot.495803d7e35f67390ff2.jpeg",
@@ -10,11 +10,11 @@
     "static/media/card-thumbnail-dceu.jpg": "/MockQZ/static/media/card-thumbnail-dceu.48b3724c33c86838253d.jpg",
     "index.html": "/MockQZ/index.html",
     "main.df170737.css.map": "/MockQZ/static/css/main.df170737.css.map",
-    "main.06540b7d.js.map": "/MockQZ/static/js/main.06540b7d.js.map",
+    "main.99f1a4f0.js.map": "/MockQZ/static/js/main.99f1a4f0.js.map",
     "787.bfc99d0a.chunk.js.map": "/MockQZ/static/js/787.bfc99d0a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df170737.css",
-    "static/js/main.06540b7d.js"
+    "static/js/main.99f1a4f0.js"
   ]
 }
