@@ -55,6 +55,7 @@
 
 .quiz-selection-section {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(
     auto-fit,
     minmax(var(--QUIZ-CARD-MIN-WIDTH, 12rem), 1fr)

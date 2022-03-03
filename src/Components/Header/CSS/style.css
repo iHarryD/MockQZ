@@ -8,10 +8,19 @@
   --HAS-GAP-VALUE: 3rem;
 }
 
+.navlink .btn {
+  transform: scale(0.8);
+}
+
 .navbar svg {
+  fill: var(--PRIMARY-FONT-CLR);
   transition: all var(--TRANSITION-DURATION);
 }
 
-.navlink svg:hover {
-  fill: var(--ACCENT-CLR);
+.github-navlink svg:hover {
+  fill: #9cdaf1;
+}
+
+.light-mode-svg:hover {
+  fill: #9fa41d;
 }

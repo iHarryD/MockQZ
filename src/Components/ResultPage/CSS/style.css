@@ -23,9 +23,9 @@
 }
 
 .to-user-message {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1rem + 2vw, 2rem);
 }
 
 .score-message {
-  font-size: 3rem;
+  font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
 }

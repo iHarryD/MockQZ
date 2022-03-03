@@ -9,7 +9,10 @@
 }
 
 .quiz-aside {
-  width: max(var(--QUIZ-ASIDE-MIN-WIDTH), var(--QUIZ-ASIDE-MAX-WIDTH));
+  width: max(
+    var(--QUIZ-ASIDE-RELATIVE-WIDTH),
+    var(--QUIZ-ASIDE-ABSOLUTE-WIDTH)
+  );
 }
 
 .current-score-container {
