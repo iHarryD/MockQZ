@@ -1,31 +1,24 @@
 import "./CSS/style.css";
 
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ReactDom from "react-dom";
 
-export function RulesModal() {
-  const [userResponse, setUserResponse] = useState(null);
-  const [userName, setUserName] = useState("Guest");
+export default function RulesModal(props) {
+  const navigate = useNavigate();
 
-  const modalButtonsHandler = (e) => {
-    let clickOrigin = e.target.value === "start" ? "start" : "back";
-    setUserResponse(clickOrigin);
-  };
-
-  return (
+  return ReactDom.createPortal(
     <>
       <div className="modal --verticle-flex --has-gap --has-padding">
         <div className="modal-header --horizontal-flex">
           <h3 className="sub-heading --h3 --has-padding">
             You have selected{" "}
-            <span className="quiz-selected-name">
-              Marvel Cinematic Universe
-            </span>{" "}
-            quiz, but before getting started, let's get you started with the
-            rules and everything.
+            <span className="quiz-selected-name">{props.quizName}</span> quiz,
+            but before getting started, let's get you started with the rules and
+            everything.
           </h3>
         </div>
         <div className="modal-main --verticle-flex --has-gap --has-padding">
-          <div className="modal__container --has-padding">
+          <div className="modal__container">
             <p className="modal__container-heading">Rules</p>
             <ul>
               <li>There will be 10 questions in total.</li>
@@ -40,7 +33,7 @@ export function RulesModal() {
               </li>
             </ul>
           </div>
-          <div className="modal__container --has-padding">
+          <div className="modal__container">
             <p className="modal__container-heading">Marking System</p>
             <ul>
               <li>You will be given points for each corrent answers only.</li>
@@ -52,7 +45,7 @@ export function RulesModal() {
               <li>Wrong answers would have no effect on your score.</li>
             </ul>
           </div>
-          <div className="modal__container --has-padding">
+          <div className="modal__container">
             <p className="modal__container-heading">Helper</p>
             <ul>
               <li>
@@ -62,40 +55,53 @@ export function RulesModal() {
                 Slice is the helper you will have. With this you will be able to
                 mark out two incorrect options.
               </li>
-              <li>
-                Question answered with the help of Slice won't contribute to
-                your score.
-              </li>
             </ul>
           </div>
         </div>
-        <div className="--verticle-flex --centered-flex --has-gap">
-          <input
-            className="username-input"
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            defaultValue={userName}
-          />
-          <div className="--horizontal-flex --centered-flex --has-gap">
-            <button
-              className="btn --primary-btn --has-hover-overlay"
-              value="start"
-              onClick={(e) => modalButtonsHandler(e)}
-            >
-              Start Quiz
-            </button>
-            <button
-              className="btn modal-close-btn --secondary-btn"
-              value="back"
-              onClick={(e) => modalButtonsHandler(e)}
-            >
-              Go Back
-            </button>
+        <div className="--verticle-flex --centered-flex">
+          <div className="--verticle-flex --has-gap">
+            <div className="username-input-container">
+              <input
+                className="username-input"
+                type="text"
+                name="name"
+                placeholder={"Guest"}
+                onChange={(e) => {
+                  props.usernameState((prev) =>
+                    e.target.value ? e.target.value : prev
+                  );
+                }}
+              />
+            </div>
+            <div className="--horizontal-flex --centered-flex --has-gap">
+              <button
+                className="btn --primary-btn --has-hover-overlay"
+                onClick={() => {
+                  navigate(`in-quiz/${props.userSelectedQuizCode}`, {
+                    state: {
+                      quizName: props.quizName,
+                    },
+                  });
+                  props.modalState(false);
+                }}
+              >
+                Start Quiz
+              </button>
+
+              <button
+                className="btn modal-close-btn --secondary-btn"
+                onClick={() => {
+                  props.modalState(false);
+                }}
+              >
+                Go Back
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div className="body-overlay-for-modal"></div>
-    </>
+    </>,
+    document.getElementById("portal")
   );
 }

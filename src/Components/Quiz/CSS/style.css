@@ -1,11 +1,3 @@
-:root {
-  --QUIZ-GREEN-CLR: #1da31d;
-  --QUIZ-RED-CLR: #d33d3d;
-  --POINT-TRACKER-BACKGROUND-CLR: #49a0eb61;
-  --QUIZ-ASIDE-MIN-WIDTH: 20vw;
-  --QUIZ-ASIDE-MAX-WIDTH: 15rem;
-}
-
 .quiz-heading {
   padding-bottom: 2rem;
   text-transform: uppercase;

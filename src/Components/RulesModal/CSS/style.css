@@ -1,7 +1,13 @@
 .modal {
-  background: var(--SECONDARY-BACKGROUND-CLR);
+  background: var(--MODAL-BACKGROUND-CLR);
   border-radius: 30px;
-  color: var(--SECONDARY-FONT-CLR);
+  box-shadow: -4px 4px 5px var(--SHADOW-CLR);
+  color: var(--MODAL-FONT-CLR);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 90vh;
   margin: 5vh 5vw;
   overflow: auto;
@@ -15,14 +21,36 @@
 }
 
 .modal__container {
-  background: #4b545b;
+  background: var(--MODAL-INNER-CONTAINERS-BACKGROUND-CLR);
   border-radius: 15px;
+  padding: 1rem 2rem;
 }
 
 .username-input {
   border-bottom: 1px solid var(--ACCENT-CLR);
   padding: 0.5rem 0.8rem;
+  width: 100%;
   text-align: center;
+}
+
+.username-input-container {
+  position: relative;
+}
+
+.username-input-container:hover::after {
+  transform: scaleX(1);
+}
+
+.username-input-container::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  height: 1px;
+  transform: scaleX(0);
+  transition: transform 200ms ease-in;
 }
 
 .modal__container ul {
@@ -39,10 +67,10 @@
   font-weight: 600;
 }
 
-body.modal-active {
-  background: #00000080;
+.body-overlay-for-modal {
+  background: #000000e0;
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

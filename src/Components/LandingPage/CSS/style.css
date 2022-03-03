@@ -27,7 +27,7 @@
   display: inline-block;
   font-size: 1.1em;
   margin-right: -8px;
-  text-shadow: -3px 2px 5px #767676;
+  text-shadow: -5px 4px 5px var(--SHADOW-CLR);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 

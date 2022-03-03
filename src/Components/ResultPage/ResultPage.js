@@ -1,20 +1,29 @@
 import "./CSS/style.css";
 
-export default function ResultPage() {
+import { useNavigate, useLocation } from "react-router-dom";
+
+export default function ResultPage(props) {
+  const location = useLocation();
+  const navigation = useNavigate();
+
   return (
     <main className="main --result-page --verticle-flex">
       <div className="result-page-header --has-padding">
         <h2 className="sub-heading --h2">
-          <span>Marvel Cinematic Universe</span> Quiz Ends
+          <span>{location.state.quizName}</span> Quiz Ends
         </h2>
       </div>
       <section className="result-section --verticle-flex --centered-flex --has-padding">
         <p className="to-user-message">
-          Kuddos, <span className="name-span --bold-700">Harry</span>.
+          Kuddos, <span className="name-span --bold-700">{props.username}</span>
+          .
         </p>
         <p className="score-message">
           Your final score is{" "}
-          <span className="total-score-span --bold-700">33</span>.
+          <span className="total-score-span --bold-700">
+            {location.state.finalScore}
+          </span>
+          .
         </p>
       </section>
       <div className="result-page-footer --has-padding">
@@ -23,7 +32,12 @@ export default function ResultPage() {
           this page.
         </p>
         <div className="--horizontal-flex --centered-flex --has-gap">
-          <button className="btn --primary-btn --has-hover-overlay">
+          <button
+            className="btn --primary-btn --has-hover-overlay"
+            onClick={() => {
+              navigation("/");
+            }}
+          >
             Go back to home
           </button>
           <button className="btn --primary-btn --has-hover-overlay">

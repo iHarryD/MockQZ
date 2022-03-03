@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useContext } from "react";
+import { useNavigate, useParams, useLocation } from "react-router-dom";
 
 import "./CSS/style.css";
 import Timer from "../Timer/Timer";
@@ -6,18 +7,21 @@ import Question from "../Question/Question";
 import PointTracker from "../PointTracker/PointTracker";
 import { QuestionsContext } from "../../QuestionsContext";
 
-export function Quiz(props) {
+export default function Quiz(props) {
   const [totalScore, setTotalScore] = useState(0);
+  const [timer, setTimer] = useState(15);
+  const [hasUserSelected, setHasUserSelected] = useState(false);
+  const [currentIntervalID, setCurrentIntervalID] = useState(null);
+  const [allPointerTrackers, setAllPoitnerTrackers] = useState([]);
+  const navigate = useNavigate();
+  const { quizcode } = useParams();
   const allQuestions = useContext(QuestionsContext);
-  const questionsList = allQuestions["mcu"];
+  const questionsList = allQuestions[quizcode];
   const currentQuestionIndex = useRef(0);
   const [currentQuestion, setCurrentQuestion] = useState(
     currentQuestionIndex.current
   );
-  const [timer, setTimer] = useState(30);
-  const [hasUserSelected, setHasUserSelected] = useState(false);
-  const [currentIntervalID, setCurrentIntervalID] = useState(null);
-  const [allPointerTrackers, setAllPoitnerTrackers] = useState([]);
+  const location = useLocation();
 
   // WHEN USER SELECTS AN OPTION
   const optionClickHandler = (e) => {
@@ -37,7 +41,15 @@ export function Quiz(props) {
   };
 
   // ENDS QUIZ WHEN ALL QUESTIONS HAVE BEEN PUT OUT
-  function quizEnds() {}
+  function quizEnds() {
+    clearInterval(currentIntervalID);
+    navigate("../single-player-mode/result", {
+      state: {
+        finalScore: totalScore,
+        quizName: location.state.quizName,
+      },
+    });
+  }
 
   // UPDATES NEXT QUESTION STATE ONLY IF NEXT QUESTION EXISTS
   function updateQuestion() {
@@ -52,7 +64,7 @@ export function Quiz(props) {
   // RESETS EVERYTHING EVERYTIME QUESTION CHANGES
   useEffect(() => {
     setHasUserSelected(false);
-    setTimer(30);
+    setTimer(15);
     clearInterval(currentIntervalID);
     const currentInterval = setInterval(() => {
       setTimer((prev) => prev - 1);
@@ -71,7 +83,7 @@ export function Quiz(props) {
     <main className="--verticle-flex --has-padding">
       <div className="quiz-header --has-padding">
         <h2 className="sub-heading --h2 quiz-heading">
-          Marvel Cinematic Universe Quiz
+          {location.state.quizName} Quiz
         </h2>
       </div>
       <section className="quiz-section --horizontal-flex">

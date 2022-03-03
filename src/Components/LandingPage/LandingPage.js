@@ -1,6 +1,10 @@
 import "./CSS/style.css";
 
-export function LandingPage() {
+import { useNavigate } from "react-router-dom";
+
+export default function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <main className="--verticle-flex --centered-flex">
       <h1 className="heading landing-page-heading --horizontal-flex --centered-flex --has-gap">
@@ -16,16 +20,22 @@ export function LandingPage() {
         </span>
       </h1>
       <h2 className="sub-heading landing-page-sub-heading --h2">
-        A quiz app that can be both fun and informative at once.
+        Haven't thought of a catchy phrase yet.
       </h2>
-      <p className="landing-page-text --bold-600">
-        Choose mode to get started.
-      </p>
+      <p className="landing-page-text --bold-600">Choose mode to get started</p>
       <div className="landing-page-btn-container --horizontal-flex --has-gap">
-        <button className="btn --primary-btn --has-hover-overlay">
+        <button
+          className="btn --primary-btn --has-hover-overlay"
+          onClick={() => {
+            navigate("/single-player-mode");
+          }}
+        >
           Single Player
         </button>
-        <button className="btn --primary-btn --has-hover-overlay">
+        <button
+          className="btn --primary-btn --has-hover-overlay"
+          disabled={true}
+        >
           Multiplayer
         </button>
       </div>
