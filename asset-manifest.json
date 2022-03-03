@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MockQZ/static/css/main.df170737.css",
-    "main.js": "/MockQZ/static/js/main.99f1a4f0.js",
+    "main.css": "/MockQZ/static/css/main.8e0cb02d.css",
+    "main.js": "/MockQZ/static/js/main.4220ffdf.js",
     "static/js/787.bfc99d0a.chunk.js": "/MockQZ/static/js/787.bfc99d0a.chunk.js",
     "static/media/card-thumbnail-mu.jpg": "/MockQZ/static/media/card-thumbnail-mu.54f97db39bc402724810.jpg",
     "static/media/card-thumbnail-aot.jpeg": "/MockQZ/static/media/card-thumbnail-aot.495803d7e35f67390ff2.jpeg",
@@ -9,12 +9,12 @@
     "static/media/card-thumbnail-hp.jpg": "/MockQZ/static/media/card-thumbnail-hp.340c12c36bc7654a8f08.jpg",
     "static/media/card-thumbnail-dceu.jpg": "/MockQZ/static/media/card-thumbnail-dceu.48b3724c33c86838253d.jpg",
     "index.html": "/MockQZ/index.html",
-    "main.df170737.css.map": "/MockQZ/static/css/main.df170737.css.map",
-    "main.99f1a4f0.js.map": "/MockQZ/static/js/main.99f1a4f0.js.map",
+    "main.8e0cb02d.css.map": "/MockQZ/static/css/main.8e0cb02d.css.map",
+    "main.4220ffdf.js.map": "/MockQZ/static/js/main.4220ffdf.js.map",
     "787.bfc99d0a.chunk.js.map": "/MockQZ/static/js/787.bfc99d0a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df170737.css",
-    "static/js/main.99f1a4f0.js"
+    "static/css/main.8e0cb02d.css",
+    "static/js/main.4220ffdf.js"
   ]
 }
